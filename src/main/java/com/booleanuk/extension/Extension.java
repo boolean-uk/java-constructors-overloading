@@ -26,5 +26,37 @@ public class Extension extends ExtensionBase {
         multiply(["2", "7", "3"], 3) -> [6, 21, 9]
      */
 
+    public float add(float a, float b) {
+        return a + b;
+    }
 
+    public double add(double a, double b) {
+        return a + b;
+    }
+
+    public float subtract (float a, float b) {
+        return a - b;
+    }
+
+    public String subtract (String a, char b) {
+        return a.replaceAll(String.valueOf(b), "");
+    }
+
+    public int multiply (int a, int b) {
+        return a * b;
+    }
+
+    public String multiply (String a, int b) {
+        // Create a String, repeat the word as many times as b
+        String str = (a + ",").repeat(b);
+        // Take the String and start from Index 0 and go through the full length of the word that repeats and then
+        // remove the last character
+        str = str.substring(0, str.length() - 1);
+        return str;
+    }
+
+    // Possible TODO
+//    public String[] multiply() {
+//
+//    }
 }
