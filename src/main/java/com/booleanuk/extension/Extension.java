@@ -27,4 +27,51 @@ public class Extension extends ExtensionBase {
      */
 
 
+    public float add (float numb1, float numb2) {
+        return numb1 + numb2;
+    }
+
+    public double add (double numb1, double numb2) {
+        return numb1 + numb2;
+    }
+
+    public float subtract (float numb1, float numb2) {
+        return numb1 - numb2;
+    }
+
+    public String subtract (String word, char c) {
+        String stringToChar = String.valueOf(c);
+        for (int i = 0; i < word.length(); i++) {
+            if(c == word.charAt(i)) {
+               word = word.replace(stringToChar,"");
+            }
+        }
+
+        return word;
+    }
+
+    public int multiply (int numb1, int numb2) {
+
+        return numb1 * numb2;
+    }
+
+    public String multiply (String word, int numb) {
+        String multiplied = "";
+        for (int i = 0; i < numb; i++) {
+            multiplied += word + ",";
+
+        }
+         multiplied = multiplied.substring(0, multiplied.length() - 1);
+        return multiplied;
+    }
+
+    @Override
+    public int[] multiply(String[] array, int numb) {
+        int [] b = new int[array.length];
+        for (int i = 0; i < array.length; i++) {
+           b[i] = Integer.parseInt(array[i])* numb;
+        }
+
+        return b;
+    }
 }
