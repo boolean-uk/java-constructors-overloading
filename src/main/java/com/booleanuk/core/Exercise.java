@@ -52,12 +52,17 @@ public class Exercise extends ExerciseBase {
         provided to the name and age members
      */
 
-
+    public Exercise(String name, int age) {
+        this.age = age;
+        this.name = name;
+    }
 
     /*
         2. Create a method named add that accepts two integers. The method should return the numbers added together.
      */
-
+    public int add (int numb1, int numb2) {
+        return numb1 + numb2;
+    }
 
 
     /*
@@ -65,6 +70,10 @@ public class Exercise extends ExerciseBase {
         together with a space in between.
      */
 
+    public String add (String one, String two) {
 
+
+        return one + " " + two;
+    }
 
 }
