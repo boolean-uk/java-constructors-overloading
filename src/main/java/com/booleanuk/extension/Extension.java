@@ -1,5 +1,6 @@
 package com.booleanuk.extension;
 
+import com.booleanuk.core.Exercise;
 import com.booleanuk.helpers.ExtensionBase;
 
 public class Extension extends ExtensionBase {
@@ -25,6 +26,42 @@ public class Extension extends ExtensionBase {
         E.g.
         multiply(["2", "7", "3"], 3) -> [6, 21, 9]
      */
+    public float add(float floatOne, float floatTwo) {
+        return floatOne + floatTwo;
+    }
 
+    public double add(double doubleOne, double doubleTwo) {
+        return doubleOne + doubleTwo;
+    }
+
+    public float subtract(float floatOne, float floatTwo) {
+        return floatOne - floatTwo;
+    }
+
+    public String subtract(String stringOne, char charOne) {
+        return stringOne.replace(String.valueOf(charOne), "");
+    }
+
+    public int multiply(int numOne, int numTwo) {
+        return numOne * numTwo;
+    }
+
+    public String multiply(String stringOne, int times) {
+        String out = stringOne;
+        for (int i = 0; i < times - 1; i++) {
+            out += "," + stringOne;
+        }
+        return out;
+    }
+
+    public int[] multiply(String[] list, int num) {
+        int[] numList = new int[list.length];
+        int calculatedNum = 0;
+        for (int i = 0; i < list.length; i++) {
+            calculatedNum = Integer.parseInt(list[i]) * num;
+            numList[i] = calculatedNum;
+        }
+        return numList;
+    }
 
 }
